@@ -1,0 +1,21 @@
+import logo from './logo.svg';
+import './App.css';
+import CustomerAdd from './CustomerAdd';
+import CustomerView from './CustomerView';
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+
+function App() {
+  return (
+    <Provider store={store}>
+           <div className="container-fluid">
+             <h1 className="text-bg-info text-danger text-center">React Redux Customer Example</h1>
+                <CustomerAdd/>
+                <CustomerView/>
+            </div>
+    </Provider>   
+  );
+}
+
+export default App;
